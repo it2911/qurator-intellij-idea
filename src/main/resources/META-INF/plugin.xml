@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>cn.com.originqc.qurator</id>
+    <name>qurator</name>
+    <vendor email="cc8602@gmail.com" url="http://www.originqc.com.cn">Originqc</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <fileType name="Qurator file" implementationClass="cn.com.originqc.QuratorFileType" fieldName="INSTANCE"
+                  language="Qurator" extensions="qrunes"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

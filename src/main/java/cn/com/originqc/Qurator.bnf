@@ -1,0 +1,28 @@
+{
+  parserClass="cn.com.originqc.parser.QuratorParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Qurator"
+  psiImplClassSuffix="Impl"
+  psiPackage="cn.com.originqc.psi"
+  psiImplPackage="cn.com.originqc.psi.impl"
+
+  elementTypeHolderClass="cn.com.originqc.psi.QuratorTypes"
+  elementTypeClass="cn.com.originqc.psi.QuratorElementType"
+  tokenTypeClass="cn.com.originqc.psi.QuratorTokenType"
+
+  psiImplUtilClass="cn.com.originqc.psi.impl.QuratorPsiImplUtil"
+}
+
+quratorFile ::= (property|COMMENT)*
+
+property ::= (KEY SEPARATOR VALUE?)|KEY {
+    pin=3
+    recoverWhile="recover_property"
+    mixin="cn.com.originqc.psi.impl.QuratorNamedElementImpl"
+    implements="cn.com.originqc.psi.QuratorNamedElement"
+    methods=[getKey getValue getName setName getNameIdentifier getPresentation]
+}
+
+private recover_property ::= !(KEY|SEPARATOR|COMMENT)
