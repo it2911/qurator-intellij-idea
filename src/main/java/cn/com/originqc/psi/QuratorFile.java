@@ -11,7 +11,7 @@ import javax.swing.*;
 
 public class QuratorFile extends PsiFileBase {
 
-    protected QuratorFile(@NotNull FileViewProvider viewProvider) {
+    public QuratorFile(@NotNull FileViewProvider viewProvider) {
         super(viewProvider, QuratorLanguage.INSTANCE);
     }
 

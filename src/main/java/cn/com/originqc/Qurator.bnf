@@ -1,5 +1,6 @@
 {
   parserClass="cn.com.originqc.parser.QuratorParser"
+  parserUtilClass="cn.com.originqc.parser.QuratorParserUtil"
 
   extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
 

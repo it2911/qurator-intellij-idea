@@ -15,9 +15,21 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <!-- 识别qrunes后缀 -->
         <fileType name="Qurator file" implementationClass="cn.com.originqc.QuratorFileType" fieldName="INSTANCE"
                   language="Qurator" extensions="qrunes"/>
+
+        <!-- 匹配 -->
+        <lang.parserDefinition language="Qurator" implementationClass="cn.com.originqc.parser.QuratorParserDefinition"/>
+
+        <!-- 高亮 -->
+        <lang.syntaxHighlighterFactory language="Qurator" implementationClass="cn.com.originqc.syntaxhighlighter.QuratorSyntaxHighlighterFactory"/>
+
+        <!-- 颜色设定界面 -->
+        <colorSettingsPage implementation="cn.com.originqc.settings.QuratorColorSettingsPage"/>
+
+        <!-- 补全　-->
+        <completion.contributor language="Qurator" implementationClass="cn.com.originqc.completion.QuratorCompletionContributor"/>
     </extensions>
 
     <actions>

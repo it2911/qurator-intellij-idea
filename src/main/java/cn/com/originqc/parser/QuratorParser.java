@@ -4,7 +4,7 @@ package cn.com.originqc.parser;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
 import static cn.com.originqc.psi.QuratorTypes.*;
-import static com.intellij.lang.parser.GeneratedParserUtilBase.*;
+import static cn.com.originqc.parser.QuratorParserUtil.*;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.tree.TokenSet;
