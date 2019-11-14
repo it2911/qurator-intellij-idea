@@ -2,6 +2,7 @@
     <id>cn.com.originqc.qurator</id>
     <name>qurator</name>
     <vendor email="cc8602@gmail.com" url="http://www.originqc.com.cn">Originqc</vendor>
+    <depends>com.intellij.modules.java</depends>
 
     <description><![CDATA[
     Enter short description for your plugin here.<br>
@@ -30,6 +31,9 @@
 
         <!-- 补全　-->
         <completion.contributor language="Qurator" implementationClass="cn.com.originqc.completion.QuratorCompletionContributor"/>
+
+        <!-- 关联　-->
+        <psi.referenceContributor implementation="cn.com.originqc.reference.QuratorReferenceContributor"/>
     </extensions>
 
     <actions>
